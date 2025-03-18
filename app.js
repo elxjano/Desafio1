@@ -20,3 +20,15 @@ function agregarAmigo(){
     }
     resultado.innerHTML = amigosHTML;
 }
+
+function sortearAmigo() {
+    let resultado = document.querySelector('#resultado');
+
+    if (listadoAmigos.length > 0) {
+        let randomIndex = Math.floor(Math.random() * listadoAmigos.length);
+        let amigoSorteado = listadoAmigos[randomIndex];
+        resultado.innerHTML = 'El amigo sorteado es: ' + amigoSorteado;
+    } else {
+        resultado.innerHTML = 'No hay amigos en la lista para sortear.';
+    }
+}
